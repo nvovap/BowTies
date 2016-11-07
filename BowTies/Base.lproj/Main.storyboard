@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BowTies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,117 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ggg-eP-SZI">
+                                <rect key="frame" x="16" y="20" width="343" height="29"/>
+                                <segments>
+                                    <segment title="R"/>
+                                    <segment title="O"/>
+                                    <segment title="Y"/>
+                                    <segment title="G"/>
+                                    <segment title="B"/>
+                                    <segment title="I"/>
+                                    <segment title="V"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="gKJ-go-avR"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dPv-0m-YbK">
+                                <rect key="frame" x="16" y="85" width="343" height="190"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bow Tie Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouj-cC-hw0">
+                                <rect key="frame" x="16" y="311" width="343" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 4/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgW-lY-0Ir">
+                                <rect key="frame" x="16" y="339" width="343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of times worn: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiq-hL-vrP">
+                                <rect key="frame" x="16" y="365" width="343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last worn: 06/25/14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh7-mc-RDE">
+                                <rect key="frame" x="16" y="391" width="343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Faworite&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFp-e8-qax">
+                                <rect key="frame" x="16" y="417" width="343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDO-ZH-EDu">
+                                <rect key="frame" x="16" y="617" width="68" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="eyd-7P-Prz"/>
+                                </constraints>
+                                <state key="normal" title="Wear"/>
+                                <connections>
+                                    <action selector="wear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gCS-HF-3U2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dva-EJ-Ujx">
+                                <rect key="frame" x="291" y="617" width="68" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="WJ4-sN-Gyu"/>
+                                </constraints>
+                                <state key="normal" title="Rate"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="ggg-eP-SZI" secondAttribute="leading" id="43j-kH-EfA"/>
+                            <constraint firstItem="wiq-hL-vrP" firstAttribute="top" secondItem="GgW-lY-0Ir" secondAttribute="bottom" constant="8" id="6e8-fm-amF"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HDO-ZH-EDu" secondAttribute="leading" id="84f-c6-O68"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sFp-e8-qax" secondAttribute="trailing" id="9mb-IV-E4K"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GgW-lY-0Ir" secondAttribute="leading" id="Npy-Pu-SiY"/>
+                            <constraint firstItem="ouj-cC-hw0" firstAttribute="top" secondItem="dPv-0m-YbK" secondAttribute="bottom" constant="36" id="OME-YC-lim"/>
+                            <constraint firstItem="dPv-0m-YbK" firstAttribute="top" secondItem="ggg-eP-SZI" secondAttribute="bottom" constant="37" id="PPY-xK-3lw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wiq-hL-vrP" secondAttribute="trailing" id="QfK-pQ-KAN"/>
+                            <constraint firstItem="HDO-ZH-EDu" firstAttribute="top" secondItem="sFp-e8-qax" secondAttribute="bottom" constant="182" id="Tan-Kj-V5a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ouj-cC-hw0" secondAttribute="trailing" id="Tdu-eW-s84"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HDO-ZH-EDu" secondAttribute="bottom" constant="20" id="ULi-6o-j3l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GgW-lY-0Ir" secondAttribute="trailing" id="VGL-Nn-BN6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ggg-eP-SZI" secondAttribute="trailing" id="XMs-WA-JfO"/>
+                            <constraint firstItem="ggg-eP-SZI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cL0-zR-XGc"/>
+                            <constraint firstItem="kh7-mc-RDE" firstAttribute="top" secondItem="wiq-hL-vrP" secondAttribute="bottom" constant="8" id="clH-R4-PY2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sFp-e8-qax" secondAttribute="leading" id="dIq-pG-9EA"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dPv-0m-YbK" secondAttribute="leading" id="fFP-Ba-e3l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kh7-mc-RDE" secondAttribute="trailing" id="ffR-5X-sQH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kh7-mc-RDE" secondAttribute="leading" id="gf5-hT-uR2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wiq-hL-vrP" secondAttribute="leading" id="jKJ-Tl-gts"/>
+                            <constraint firstItem="sFp-e8-qax" firstAttribute="top" secondItem="kh7-mc-RDE" secondAttribute="bottom" constant="8" id="kdQ-yn-xqx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dva-EJ-Ujx" secondAttribute="bottom" constant="20" id="lnA-tj-Lyx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dPv-0m-YbK" secondAttribute="trailing" id="n1D-pT-V0U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dva-EJ-Ujx" secondAttribute="trailing" id="olV-42-67N"/>
+                            <constraint firstItem="GgW-lY-0Ir" firstAttribute="top" secondItem="ouj-cC-hw0" secondAttribute="bottom" constant="8" id="tGF-N0-VQ2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ouj-cC-hw0" secondAttribute="leading" id="vmg-uP-lfx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favoriteLabel" destination="kh7-mc-RDE" id="HO6-gz-k7K"/>
+                        <outlet property="imageView" destination="dPv-0m-YbK" id="5Kl-nY-7gj"/>
+                        <outlet property="nameLabel" destination="ouj-cC-hw0" id="hEe-7c-NSd"/>
+                        <outlet property="ratingLabel" destination="GgW-lY-0Ir" id="2kM-Xe-WdG"/>
+                        <outlet property="segmentedControl" destination="ggg-eP-SZI" id="aZK-No-Z0z"/>
+                        <outlet property="timesWornLabel" destination="wiq-hL-vrP" id="C6T-6W-leJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
