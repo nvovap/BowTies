@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E71D8D3E1DD1075100D7E0D7"
+               BlueprintIdentifier = "E71D8D5C1DD1090800D7E0D7"
                BuildableName = "BowTies.app"
                BlueprintName = "BowTies"
                ReferencedContainer = "container:BowTies.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E71D8D3E1DD1075100D7E0D7"
+            BlueprintIdentifier = "E71D8D5C1DD1090800D7E0D7"
             BuildableName = "BowTies.app"
             BlueprintName = "BowTies"
             ReferencedContainer = "container:BowTies.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E71D8D3E1DD1075100D7E0D7"
+            BlueprintIdentifier = "E71D8D5C1DD1090800D7E0D7"
             BuildableName = "BowTies.app"
             BlueprintName = "BowTies"
             ReferencedContainer = "container:BowTies.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E71D8D3E1DD1075100D7E0D7"
+            BlueprintIdentifier = "E71D8D5C1DD1090800D7E0D7"
             BuildableName = "BowTies.app"
             BlueprintName = "BowTies"
             ReferencedContainer = "container:BowTies.xcodeproj">
