@@ -16,7 +16,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        let viewController = window!.rootViewController as! ViewController
+        
+        viewController.managerContext = persistentContainer.viewContext
+        
+//        let bowtie = NSEntityDescription.insertNewObject(forEntityName: "Bowtie", into: persistentContainer.viewContext) as! Bowtie
+//        
+//        bowtie.name = "My bow tie"
+//        bowtie.lastWorn = NSDate()
+//        
+//        do {
+//            try persistentContainer.viewContext.save()
+//        } catch let error as NSError {
+//            print("Saving error: \(error), \(error.userInfo)")
+//        }
+//        
+//        
+//        do {
+//            let request = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+//            let ties = try persistentContainer.viewContext.fetch(request)
+//            
+//            for sample in ties {
+//                print("Name: \(sample.name), Worm: \(sample.lastWorn)")
+//            }
+//            
+//        } catch let error {
+//            print("Fetching error \(error.localizedDescription)")
+//        }
+        
         return true
     }
 

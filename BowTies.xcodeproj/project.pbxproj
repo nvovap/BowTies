@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		328B60F91DD204E8001886C6 /* BowTies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 328B60F71DD204E8001886C6 /* BowTies.xcdatamodeld */; };
 		E71D8D611DD1090800D7E0D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D8D601DD1090800D7E0D7 /* AppDelegate.swift */; };
 		E71D8D631DD1090800D7E0D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D8D621DD1090800D7E0D7 /* ViewController.swift */; };
 		E71D8D661DD1090800D7E0D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71D8D641DD1090800D7E0D7 /* Main.storyboard */; };
-		E71D8D691DD1090800D7E0D7 /* BowTies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E71D8D671DD1090800D7E0D7 /* BowTies.xcdatamodeld */; };
 		E71D8D6B1DD1090800D7E0D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71D8D6A1DD1090800D7E0D7 /* Assets.xcassets */; };
 		E71D8D6E1DD1090800D7E0D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71D8D6C1DD1090800D7E0D7 /* LaunchScreen.storyboard */; };
 		E71D8D761DD114E800D7E0D7 /* SampleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E71D8D751DD114E800D7E0D7 /* SampleData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		328B60F81DD204E8001886C6 /* BowTies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BowTies.xcdatamodel; sourceTree = "<group>"; };
 		E71D8D5D1DD1090800D7E0D7 /* BowTies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowTies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71D8D601DD1090800D7E0D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E71D8D621DD1090800D7E0D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E71D8D651DD1090800D7E0D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E71D8D681DD1090800D7E0D7 /* BowTies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BowTies.xcdatamodel; sourceTree = "<group>"; };
 		E71D8D6A1DD1090800D7E0D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E71D8D6D1DD1090800D7E0D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E71D8D6F1DD1090800D7E0D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,8 +64,8 @@
 				E71D8D6A1DD1090800D7E0D7 /* Assets.xcassets */,
 				E71D8D6C1DD1090800D7E0D7 /* LaunchScreen.storyboard */,
 				E71D8D6F1DD1090800D7E0D7 /* Info.plist */,
+				328B60F71DD204E8001886C6 /* BowTies.xcdatamodeld */,
 				E71D8D751DD114E800D7E0D7 /* SampleData.plist */,
-				E71D8D671DD1090800D7E0D7 /* BowTies.xcdatamodeld */,
 			);
 			path = BowTies;
 			sourceTree = "<group>";
@@ -145,7 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E71D8D631DD1090800D7E0D7 /* ViewController.swift in Sources */,
-				E71D8D691DD1090800D7E0D7 /* BowTies.xcdatamodeld in Sources */,
+				328B60F91DD204E8001886C6 /* BowTies.xcdatamodeld in Sources */,
 				E71D8D611DD1090800D7E0D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,12 +313,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E71D8D671DD1090800D7E0D7 /* BowTies.xcdatamodeld */ = {
+		328B60F71DD204E8001886C6 /* BowTies.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E71D8D681DD1090800D7E0D7 /* BowTies.xcdatamodel */,
+				328B60F81DD204E8001886C6 /* BowTies.xcdatamodel */,
 			);
-			currentVersion = E71D8D681DD1090800D7E0D7 /* BowTies.xcdatamodel */;
+			currentVersion = 328B60F81DD204E8001886C6 /* BowTies.xcdatamodel */;
 			path = BowTies.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
