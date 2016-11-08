@@ -13,21 +13,40 @@ class ViewController: UIViewController {
     
     var managerContext: NSManagedObjectContext!
     
-    
+    var currentBowtie: Bowtie!
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var timesWornLabel: UILabel!
+    
+    @IBOutlet weak var lastWornLabel: UILabel!
     @IBOutlet weak var favoriteLabel: UILabel!
 
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         insertSampleData()
         
+        let request = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+        let firstTitle = segmentedControl.titleForSegment(at: 0)
+        
+        request.predicate = NSPredicate(format: "searchKey == %@", firstTitle!)
+        
+        do {
+            let result = try managerContext.fetch(request)
+            
+            currentBowtie = result.first!
+            populate(bowtie: result.first!)
+            
+        } catch let error {
+            print(error)
+            
+            
+        }
         
     }
 
@@ -37,15 +56,96 @@ class ViewController: UIViewController {
     }
     
     @IBAction func segmentedControl(_ sender: UISegmentedControl) {
+        
+        let selectedValue = sender.titleForSegment(at: sender.selectedSegmentIndex)
+        
+        let request = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+        
+        
+        request.predicate = NSPredicate(format: "searchKey == %@", selectedValue!)
+        
+        do {
+            let result = try managerContext.fetch(request)
+            
+            currentBowtie = result.first!
+            populate(bowtie: result.first!)
+            
+        } catch let error {
+            print(error)
+        }
     }
    
 
     @IBAction func wear(_ sender: Any) {
+        //let times = currentBowtie.timesWorn
+        currentBowtie.timesWorn += 1
+        
+        currentBowtie.lastWorn = NSDate()
+        
+        do {
+            try managerContext.save()
+        }catch let error {
+            print("Colud not save: \(error)")
+        }
+        
+        populate(bowtie: currentBowtie)
+    }
+    
+    @IBAction func rate(_ sender: Any) {
+        let alert = UIAlertController(title: "New Rating", message: "Rate this bow tie", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {(action: UIAlertAction) in
+            let textField = alert.textFields![0] as UITextField
+            
+            self.updateRating(numbericString: textField.text!)
+            
+        })
+        
+        alert.addTextField { (text: UITextField) in
+            text.keyboardType = .numberPad
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(saveAction)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     
+    func updateRating(numbericString: String) {
+        currentBowtie.rating = Double(numbericString)!
+        
+        do {
+            try managerContext.save()
+            self.populate(bowtie: self.currentBowtie)
+        }catch let error as NSError {
+            print("Colud not save: \(error)")
+            
+            if error.domain == NSCocoaErrorDomain && (error.code == NSValidationNumberTooLargeError || error.code == NSValidationNumberTooSmallError){
+                rate(currentBowtie)
+            }
+        }
+    }
     
-    
+    func populate(bowtie: Bowtie) {
+        imageView.image = UIImage(data: bowtie.photoData as! Data)
+        nameLabel.text = bowtie.name
+        ratingLabel.text = "Rating: \(bowtie.rating)"
+        
+        timesWornLabel.text = "# times worn: \(bowtie.timesWorn)"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        
+        lastWornLabel.text = "Last worn: " + dateFormatter.string(from: bowtie.lastWorn as! Date)
+        
+        favoriteLabel.isHidden = !bowtie.isFavorite
+        
+        view.tintColor = bowtie.tintColor as! UIColor
+    }
     
     func colorFtomDict(dict: NSDictionary) -> UIColor {
         let red = dict["red"] as! NSNumber

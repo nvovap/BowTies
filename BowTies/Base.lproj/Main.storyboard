@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="ggg-eP-SZI">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ggg-eP-SZI">
                                 <rect key="frame" x="16" y="20" width="343" height="29"/>
                                 <segments>
                                     <segment title="R"/>
@@ -91,6 +91,9 @@
                                     <constraint firstAttribute="width" constant="68" id="WJ4-sN-Gyu"/>
                                 </constraints>
                                 <state key="normal" title="Rate"/>
+                                <connections>
+                                    <action selector="rate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYK-G7-ZKf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,8 +126,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="favoriteLabel" destination="kh7-mc-RDE" id="HO6-gz-k7K"/>
+                        <outlet property="favoriteLabel" destination="sFp-e8-qax" id="evm-rF-sby"/>
                         <outlet property="imageView" destination="dPv-0m-YbK" id="5Kl-nY-7gj"/>
+                        <outlet property="lastWornLabel" destination="kh7-mc-RDE" id="YSa-we-hdT"/>
                         <outlet property="nameLabel" destination="ouj-cC-hw0" id="hEe-7c-NSd"/>
                         <outlet property="ratingLabel" destination="GgW-lY-0Ir" id="2kM-Xe-WdG"/>
                         <outlet property="segmentedControl" destination="ggg-eP-SZI" id="aZK-No-Z0z"/>
